@@ -1,0 +1,25 @@
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from app.routes import predict
+
+app = FastAPI(
+    title="Diabetes api",
+    description="Prediccion de diabetes",
+    version="1.0.0"
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://front-vitalscan.vercel.app"], 
+    # https://front-vitalscan.vercel.app
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+@app.get("/healthy")
+def root():
+    return {"message": "ok"}
+
+
+#rutas
+app.include_router(predict.router, prefix="/api")
