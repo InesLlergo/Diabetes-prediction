@@ -1,32 +1,53 @@
-# Diabetes Prediction Project
+# Diabetes Prediction
 
-## Overview
-This project aims to create a predictive model for diabetes using machine learning techniques. The dataset used contains various medical attributes to help determine if a patient is at risk for diabetes.
+This project aims to predict diabetes based on various healthcare data. The application is designed to be user-friendly and provides accurate predictions using machine learning algorithms.
 
-## Getting Started
-To get a copy of the project running on your local machine, follow these simple steps:
+## Table of Contents
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [Backend](#backend)
+4. [Frontend](#frontend)
+5. [Contributing](#contributing)
+6. [License](#license)
 
+## Installation
+
+### Prerequisites
+- Python 3.8+
+- Node.js 12+
+
+### Backend Installation Steps
 1. Clone the repository:
    ```bash
    git clone https://github.com/InesLlergo/Diabetes-prediction.git
    ```
-
-2. Install dependencies:
+2. Navigate to the backend directory:
    ```bash
-   cd Diabetes-prediction
+   cd Diabetes-prediction/backend
+   ```
+3. Install the required Python packages:
+   ```bash
    pip install -r requirements.txt
    ```
-
-3. Run the application:
+4. Run the backend server:
    ```bash
    python app.py
    ```
 
-## Data Sources
-Data for this project was sourced from various medical databases. Ensure that you have access to the required datasets before running the model.
+### Frontend Installation Steps
+1. Navigate to the frontend directory:
+   ```bash
+   cd ../frontend
+   ```
+2. Install the required Node.js packages:
+   ```bash
+   npm install
+   ```
+3. Run the frontend application:
+   ```bash
+   npm start
+   ```
 
-## Contributing
-Contributions are welcome! Please feel free to submit a pull request or open an issue on GitHub.
+## Usage
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Once you have both the backend and frontend running, you can access the application through your web browser at `http://localhost:3000`. Input your health data to receive diabetes prediction results.
